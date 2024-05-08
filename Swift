@@ -1,0 +1,65 @@
+import SwiftUI
+
+struct WarTacticsView: View {
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 20) {
+                Text("War Tactics")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding()
+
+                // Add your war tactics information here
+                Text("War tactics information goes here.")
+                    .font(.body)
+                    .padding()
+
+                // Add more information as needed
+            }
+        }
+    }
+}
+
+struct FirstAidView: View {
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 20) {
+                Text("First Aid")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding()
+
+                // Add your first aid information here
+                Text("First aid information goes here.")
+                    .font(.body)
+                    .padding()
+
+                // Add more information as needed
+            }
+        }
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        TabView {
+            WarTacticsView()
+                .tabItem {
+                    Image(systemName: "shield")
+                    Text("War Tactics")
+                }
+
+            FirstAidView()
+                .tabItem {
+                    Image(systemName: "bandage")
+                    Text("First Aid")
+                }
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
